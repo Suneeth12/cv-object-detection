@@ -59,3 +59,6 @@ cv-object-detection/
 **Production swap**: replace the window scorer with a YOLO / Faster R-CNN head
 and the pixel classifier with a U-Net / Mask R-CNN in PyTorch — the NMS, IoU
 matching, mAP, and Jaccard evaluation code carries over unchanged.
+
+## 👤 Author
+**Suneeth Reddy Peddamallu** — [GitHub](https://github.com/Suneeth12) • [Portfolio](https://suneeth.live) • [LinkedIn](https://linkedin.com/in/suneeth-reddy-peddamallu)
