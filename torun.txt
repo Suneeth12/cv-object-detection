@@ -1,0 +1,26 @@
+HOW TO RUN — Computer Vision: Object Detection & Segmentation
+=============================================================
+
+1. Install dependencies:
+       pip install -r requirements.txt
+
+2. Generate the synthetic images (pixels + boxes + masks):
+       python3 src/generate_data.py
+
+3. Object detection (sliding window + NMS, scored by mAP@0.5):
+       python3 src/detection.py
+
+4. Semantic segmentation (per-pixel classification, scored by mean IoU):
+       python3 src/segmentation.py
+
+Outputs:
+   reports/detections.png            — predicted boxes vs ground truth
+   reports/detection_metrics.json    — mAP@0.5
+   reports/segmentation.png          — image / ground-truth / predicted mask
+   reports/segmentation_metrics.json — mean IoU
+
+Or just run everything:  ./run.sh
+
+Note: a classical CV pipeline (no GPU/torch) so it runs anywhere; the focus is
+the detection/segmentation EVALUATION (IoU matching, NMS, mAP, Jaccard) which is
+identical for deep models. Production swap: YOLO/Faster R-CNN + U-Net/Mask R-CNN.
